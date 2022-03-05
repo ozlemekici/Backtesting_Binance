@@ -21,7 +21,7 @@ def historical_Data_Write():
 
 
 for symbol in symbolList:
-    print("DATA ÇEKİLİYOR: ", symbol)
+    print("Getting Data: ", symbol)
     candlesticks = client.get_historical_klines(
         symbol, client.KLINE_INTERVAL_1MINUTE, "1 January, 2022", "3 March, 2022")
     historical_Data_Write()
