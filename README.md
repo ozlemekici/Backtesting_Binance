@@ -1,14 +1,16 @@
 # Historical Data Extraction from Binance
 <br/>
-Code directory for pulling Historical Data of a pair from Binance with API
+Code directory for pulling Historical Data of a pair from Binance with API and backtesting on downloaded data
 
 <br/>
 
-You can run the code by typing your ApiKey and SecretKeys into the config file.
+You can run the code by typing your ApiKey and SecretKeys into the config file. 
 
 <br/>
 
-Pulls data for any pair you type into **symbolList = ["BTCUSDT"]**
+Pulls data for any pair you type into **symbolList = ["BTCUSDT"]** 
+<br/>
+Since csv name will be needed in backtesing, this part should be paid attention to.
 
 <br/>
 
