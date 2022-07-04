@@ -51,7 +51,7 @@ for i in range(df.shape[0]):
                 if highest > principal:
                     highest = highest
                 CountProcesses = CountProcesses + 1
-                if shortExitPrice < shortEnterFiyat:
+                if shortExitPrice < shortEnterPrice:
                     win = win + 1
                 else:
                     loss = loss + 1
@@ -65,7 +65,7 @@ for i in range(df.shape[0]):
                 longProcess = True
 
             if principal < 5:
-                print("Bakiye Yetersiz...")
+                print("Insufficient Balance...")
 
         # BEAR EVENT
         if float(df["Macd Diff"][i-1]) < 0:
@@ -95,7 +95,7 @@ for i in range(df.shape[0]):
 
             # SHORT ENTER
             if shortProcess == False and principal > 5:
-                shortEnterFiyat = float(df["open"][i])
+                shortEnterPrice = float(df["open"][i])
                 shortProcess = True
                 #principal = principal * 0.9996
             if principal < 5:
